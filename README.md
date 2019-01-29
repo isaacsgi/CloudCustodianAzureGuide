@@ -20,6 +20,7 @@ Guide to Cloud Custodian on Azure
 https://cloudcustodian.io/docs/azure/authentication.html">Authentication</a>
 
 <a id="https://cloudcustodian.io/docs/azure/examples/index.html">Basic Examples</a>
+
 <a id="https://cloudcustodian.io/docs/azure/advanced/index.html">Advanced Usage</a>
 
 ## CC Drill down

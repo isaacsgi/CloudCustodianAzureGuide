@@ -13,13 +13,14 @@ Guide to Cloud Custodian on Azure
 
 ## Getting Started
 
-### Install (Windows, Linux, Mac)
-
 ### Quickstart
-<h4 id=" https://cloudcustodian.io/docs/azure/gettingstarted.html">
-Getting Started and writing your first policy</h3>
+<a id=" https://cloudcustodian.io/docs/azure/gettingstarted.html"> Getting Started and writing your first policy</a>
 
-### Authentication
+<a id="
+https://cloudcustodian.io/docs/azure/authentication.html">Authentication</a>
+
+<a id="https://cloudcustodian.io/docs/azure/examples/index.html">Basic Examples</a>
+<a id="https://cloudcustodian.io/docs/azure/advanced/index.html">Advanced Usage</a>
 
 ## CC Drill down
 
@@ -29,7 +30,6 @@ Getting Started and writing your first policy</h3>
 
 ### Action
 
-### Basic to advanced samples
 
 ## Advanced topics
 
@@ -42,4 +42,4 @@ Getting Started and writing your first policy</h3>
 
 ### Blob Storage
 
-### Dev Install
+### Dev Install (Windows, Linux, Mac)

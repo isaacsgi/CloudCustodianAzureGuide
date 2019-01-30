@@ -1,0 +1,21 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "loadBalancers_gitestlb010319_name": {
+            "value": null
+        },
+        "loadBalancers_gilbnoipv6010319_name": {
+            "value": null
+        },
+        "publicIPAddresses_gilbip010319_name": {
+            "value": null
+        },
+        "publicIPAddresses_gitpubip010319_name": {
+            "value": null
+        },
+        "publicIPAddresses_gitpubipv6010319_name": {
+            "value": null
+        }
+    }
+}

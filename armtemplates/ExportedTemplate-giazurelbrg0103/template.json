@@ -1,0 +1,178 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "loadBalancers_gitestlb010319_name": {
+            "defaultValue": "gitestlb010319",
+            "type": "String"
+        },
+        "loadBalancers_gilbnoipv6010319_name": {
+            "defaultValue": "gilbnoipv6010319",
+            "type": "String"
+        },
+        "publicIPAddresses_gilbip010319_name": {
+            "defaultValue": "gilbip010319",
+            "type": "String"
+        },
+        "publicIPAddresses_gitpubip010319_name": {
+            "defaultValue": "gitpubip010319",
+            "type": "String"
+        },
+        "publicIPAddresses_gitpubipv6010319_name": {
+            "defaultValue": "gitpubipv6010319",
+            "type": "String"
+        }
+    },
+    "variables": {},
+    "resources": [
+        {
+            "comments": "Generalized from resource: '/subscriptions/2201d2bc-410b-4fca-87db-1f7354844778/resourceGroups/giazurelbrg0103/providers/Microsoft.Network/loadBalancers/gilbnoipv6010319'.",
+            "type": "Microsoft.Network/loadBalancers",
+            "sku": {
+                "name": "Basic",
+                "tier": "Regional"
+            },
+            "name": "[parameters('loadBalancers_gilbnoipv6010319_name')]",
+            "apiVersion": "2018-10-01",
+            "location": "centralus",
+            "scale": null,
+            "properties": {
+                "provisioningState": "Succeeded",
+                "resourceGuid": "e93c24f6-2528-4f13-bdb3-0f1465138468",
+                "frontendIPConfigurations": [
+                    {
+                        "name": "LoadBalancerFrontEnd",
+                        "etag": "W/\"cad3a6ca-2907-4ff6-8084-e29284608587\"",
+                        "properties": {
+                            "provisioningState": "Succeeded",
+                            "privateIPAllocationMethod": "Dynamic",
+                            "publicIPAddress": {
+                                "id": "[resourceId('Microsoft.Network/publicIPAddresses', parameters('publicIPAddresses_gilbip010319_name'))]"
+                            }
+                        }
+                    }
+                ],
+                "backendAddressPools": [],
+                "loadBalancingRules": [],
+                "probes": [],
+                "inboundNatRules": [],
+                "inboundNatPools": []
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/publicIPAddresses', parameters('publicIPAddresses_gilbip010319_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/2201d2bc-410b-4fca-87db-1f7354844778/resourceGroups/giazurelbrg0103/providers/Microsoft.Network/loadBalancers/gitestlb010319'.",
+            "type": "Microsoft.Network/loadBalancers",
+            "sku": {
+                "name": "Basic",
+                "tier": "Regional"
+            },
+            "name": "[parameters('loadBalancers_gitestlb010319_name')]",
+            "apiVersion": "2018-10-01",
+            "location": "eastus2",
+            "scale": null,
+            "properties": {
+                "provisioningState": "Succeeded",
+                "resourceGuid": "e422c587-af7c-419d-beaa-4ff546b551ee",
+                "frontendIPConfigurations": [
+                    {
+                        "name": "LoadBalancerFrontEnd",
+                        "etag": "W/\"40597621-c12c-4020-9aff-cbd3ba4559c6\"",
+                        "properties": {
+                            "provisioningState": "Succeeded",
+                            "privateIPAllocationMethod": "Dynamic",
+                            "publicIPAddress": {
+                                "id": "[resourceId('Microsoft.Network/publicIPAddresses', parameters('publicIPAddresses_gitpubip010319_name'))]"
+                            }
+                        }
+                    },
+                    {
+                        "name": "LoadBalancerIPv6FrontEnd",
+                        "etag": "W/\"40597621-c12c-4020-9aff-cbd3ba4559c6\"",
+                        "properties": {
+                            "provisioningState": "Succeeded",
+                            "privateIPAllocationMethod": "Dynamic",
+                            "publicIPAddress": {
+                                "id": "[resourceId('Microsoft.Network/publicIPAddresses', parameters('publicIPAddresses_gitpubipv6010319_name'))]"
+                            }
+                        }
+                    }
+                ],
+                "backendAddressPools": [],
+                "loadBalancingRules": [],
+                "probes": [],
+                "inboundNatRules": [],
+                "inboundNatPools": []
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/publicIPAddresses', parameters('publicIPAddresses_gitpubip010319_name'))]",
+                "[resourceId('Microsoft.Network/publicIPAddresses', parameters('publicIPAddresses_gitpubipv6010319_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/2201d2bc-410b-4fca-87db-1f7354844778/resourceGroups/giazurelbrg0103/providers/Microsoft.Network/publicIPAddresses/gilbip010319'.",
+            "type": "Microsoft.Network/publicIPAddresses",
+            "sku": {
+                "name": "Basic",
+                "tier": "Regional"
+            },
+            "name": "[parameters('publicIPAddresses_gilbip010319_name')]",
+            "apiVersion": "2018-10-01",
+            "location": "centralus",
+            "scale": null,
+            "properties": {
+                "provisioningState": "Succeeded",
+                "resourceGuid": "6329e47e-1e0d-4ca6-872d-b2708797e682",
+                "publicIPAddressVersion": "IPv4",
+                "publicIPAllocationMethod": "Dynamic",
+                "idleTimeoutInMinutes": 4,
+                "ipTags": []
+            },
+            "dependsOn": []
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/2201d2bc-410b-4fca-87db-1f7354844778/resourceGroups/giazurelbrg0103/providers/Microsoft.Network/publicIPAddresses/gitpubip010319'.",
+            "type": "Microsoft.Network/publicIPAddresses",
+            "sku": {
+                "name": "Basic",
+                "tier": "Regional"
+            },
+            "name": "[parameters('publicIPAddresses_gitpubip010319_name')]",
+            "apiVersion": "2018-10-01",
+            "location": "eastus2",
+            "scale": null,
+            "properties": {
+                "provisioningState": "Succeeded",
+                "resourceGuid": "db6f65c0-d8eb-428f-894b-1d20c4c9a76b",
+                "publicIPAddressVersion": "IPv4",
+                "publicIPAllocationMethod": "Dynamic",
+                "idleTimeoutInMinutes": 4,
+                "ipTags": []
+            },
+            "dependsOn": []
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/2201d2bc-410b-4fca-87db-1f7354844778/resourceGroups/giazurelbrg0103/providers/Microsoft.Network/publicIPAddresses/gitpubipv6010319'.",
+            "type": "Microsoft.Network/publicIPAddresses",
+            "sku": {
+                "name": "Basic",
+                "tier": "Regional"
+            },
+            "name": "[parameters('publicIPAddresses_gitpubipv6010319_name')]",
+            "apiVersion": "2018-10-01",
+            "location": "eastus2",
+            "scale": null,
+            "properties": {
+                "provisioningState": "Succeeded",
+                "resourceGuid": "3aa50d7f-0d43-4c9c-a2eb-fbc4adfe692e",
+                "publicIPAddressVersion": "IPv6",
+                "publicIPAllocationMethod": "Dynamic",
+                "idleTimeoutInMinutes": 4,
+                "ipTags": []
+            },
+            "dependsOn": []
+        }
+    ]
+}

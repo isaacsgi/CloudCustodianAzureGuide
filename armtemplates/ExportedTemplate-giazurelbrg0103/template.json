@@ -26,7 +26,7 @@
     "variables": {},
     "resources": [
         {
-            "comments": "Generalized from resource: '/subscriptions/2201d2bc-410b-4fca-87db-1f7354844778/resourceGroups/giazurelbrg0103/providers/Microsoft.Network/loadBalancers/gilbnoipv6010319'.",
+            "comments": "Generalized from resource: '/subscriptions/xxxxxxxxxxx/resourceGroups/giazurelbrg0103/providers/Microsoft.Network/loadBalancers/gilbnoipv6010319'.",
             "type": "Microsoft.Network/loadBalancers",
             "sku": {
                 "name": "Basic",
@@ -63,7 +63,7 @@
             ]
         },
         {
-            "comments": "Generalized from resource: '/subscriptions/2201d2bc-410b-4fca-87db-1f7354844778/resourceGroups/giazurelbrg0103/providers/Microsoft.Network/loadBalancers/gitestlb010319'.",
+            "comments": "Generalized from resource: '/subscriptions/xxxxxxxxxxx/resourceGroups/giazurelbrg0103/providers/Microsoft.Network/loadBalancers/gitestlb010319'.",
             "type": "Microsoft.Network/loadBalancers",
             "sku": {
                 "name": "Basic",
@@ -112,7 +112,7 @@
             ]
         },
         {
-            "comments": "Generalized from resource: '/subscriptions/2201d2bc-410b-4fca-87db-1f7354844778/resourceGroups/giazurelbrg0103/providers/Microsoft.Network/publicIPAddresses/gilbip010319'.",
+            "comments": "Generalized from resource: '/subscriptions/xxxxxxxxxxx/resourceGroups/giazurelbrg0103/providers/Microsoft.Network/publicIPAddresses/gilbip010319'.",
             "type": "Microsoft.Network/publicIPAddresses",
             "sku": {
                 "name": "Basic",
@@ -133,7 +133,7 @@
             "dependsOn": []
         },
         {
-            "comments": "Generalized from resource: '/subscriptions/2201d2bc-410b-4fca-87db-1f7354844778/resourceGroups/giazurelbrg0103/providers/Microsoft.Network/publicIPAddresses/gitpubip010319'.",
+            "comments": "Generalized from resource: '/subscriptions/xxxxxxxxxxx/resourceGroups/giazurelbrg0103/providers/Microsoft.Network/publicIPAddresses/gitpubip010319'.",
             "type": "Microsoft.Network/publicIPAddresses",
             "sku": {
                 "name": "Basic",
@@ -154,7 +154,7 @@
             "dependsOn": []
         },
         {
-            "comments": "Generalized from resource: '/subscriptions/2201d2bc-410b-4fca-87db-1f7354844778/resourceGroups/giazurelbrg0103/providers/Microsoft.Network/publicIPAddresses/gitpubipv6010319'.",
+            "comments": "Generalized from resource: '/subscriptions/xxxxxxxxxxx/resourceGroups/giazurelbrg0103/providers/Microsoft.Network/publicIPAddresses/gitpubipv6010319'.",
             "type": "Microsoft.Network/publicIPAddresses",
             "sku": {
                 "name": "Basic",

@@ -15,9 +15,9 @@ Custodian is built with the ability to be run from different accounts and levera
 ## Introduction
 
 ### Architecture
-(./pictures/yml-picture.jpg "Cloud Custodian uses simple Yaml to enforce policy")
+!["Cloud Custodian uses simple Yaml to enforce policy"](./pictures/yml-picture.jpg "Cloud Custodian uses simple Yaml to enforce policy")
 
-(./pictures/cc-multi-cloud.jpg "Cloud Custodian enables a consistent policy enforcement across clouds")
+!["Cloud Custodian enables a consistent policy enforcement across clouds"](./pictures/cc-multi-cloud.jpg "Cloud Custodian enables a consistent policy enforcement across clouds")
 
 ### Component Overview
 

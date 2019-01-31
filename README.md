@@ -15,6 +15,9 @@ Custodian is built with the ability to be run from different accounts and levera
 ## Introduction
 
 ### Architecture
+(./pictures/yml-picture.jpg "Cloud Custodian uses simple Yaml to enforce policy")
+
+(./pictures/cc-multi-cloud.jpg "Cloud Custodian enables a consistent policy enforcement across clouds")
 
 ### Component Overview
 
@@ -40,11 +43,12 @@ Custodian is built with the ability to be run from different accounts and levera
 
 ### Action
 
-
 ## Advanced topics
 
 ### Related services 
 #### Eg, frontend-public-ip on https://cloudcustodian.io/docs/azure/policy/resources/loadbalancer.html 
+
+### Metrics
 
 ### Mailer
 

@@ -2,10 +2,10 @@
 ## Guide to Cloud Custodian on Azure
 ### Introduction
 **TO-DO Why / What / How Cloud Custodian?**
-Business Value
-Security/Governance/Control
 
+**TO-DO Business Value**
 
+**TO-DO Security/Governance/Control**
 
 **TO-DO Typical use cases**
 
@@ -16,7 +16,7 @@ Security/Governance/Control
 
 !["Cloud Custodian enables a consistent policy enforcement across clouds"](./pictures/cc-multi-cloud.jpg "Cloud Custodian enables a consistent policy enforcement across clouds")
 
-### Component Overview
+### **TO-DO: Component Overview**
 
 ### Deployment
 **To-Do: Need Azure Version**
@@ -27,13 +27,13 @@ Custodian uses a flexible query language for filtering resources to a particular
 
 The stateless design of Custodian greatly simplifies feature development and operations. It also provides flexibility around execution environment (local cli, vm-based server or serverless container).
 
-When a user runs Custodian, Custodian will run the specified policy against the account and region specified by the user. Custodian will iterate over all resources defined in the policy. In the CLI, users specify the account and region they want to target. During the run, each policy in the config will generate metrics that are sent to **TO-DO: Azure flow? ** in the account that is targeted. 
+When a user runs Custodian, Custodian will run the specified policy against the account and region specified by the user. Custodian will iterate over all resources defined in the policy. In the CLI, users specify the account and region they want to target. During the run, each policy in the config will generate metrics that are sent to **TO-DO: Azure flow?** in the account that is targeted. 
 
 The run will also generate structured record output and logs that can be sent to an Azure Blob Storage Account object. in the account Custodian was run from. 
 
 If Custodian is being run without **TO-DO: Azure flow?**  Assume Roles, all output will be put into the same account. 
 
-Custodian is built with the ability to be run from different accounts and leverage STS Role Assumption for cross-account access. Users can leverage the metrics that are being generated after each run by creating Custodian Dashboards in **TO-DO Azure flow?** Azure OMS (other?).
+Custodian is built with the ability to be run from different accounts and leverage STS Role Assumption for cross-account access. Users can leverage the metrics that are being generated after each run by creating Custodian Dashboards in **TO-DO Azure flow?Azure OMS (other?)**.
 
 ### Concepts
 [Policy](https://cloudcustodian.io/docs/azure/policy/index.html)
@@ -70,12 +70,6 @@ Custodian is built with the ability to be run from different accounts and levera
 - [Azure Authentication Basics](https://docs.microsoft.com/en-us/azure/active-directory/develop/authentication-scenarios)
 
 - [Application and service principal objects in Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/develop/app-objects-and-service-principals)
-
-### Cloud Custodian Drill Down - Basic
-
-[Basic Examples](https://cloudcustodian.io/docs/azure/examples/index.html)
-
-[Advanced Usage](https://cloudcustodian.io/docs/azure/advanced/index.html)
 
 ## Cloud Custodian Drill down - Basic Examples
 **To-Do: Azure ARM templates to set up and demonstrate policy execution results**

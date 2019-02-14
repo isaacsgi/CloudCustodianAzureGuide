@@ -78,7 +78,7 @@ Custodian is built with the ability to be run from different accounts and levera
 
 [Getting Started and writing your first policy]( https://cloudcustodian.io/docs/azure/gettingstarted.html)
 
-**TO-DO: Based on H/F feedback - Confirm install details (Windows, Linux, Mac, Docker)**
+**TO-DO: Confirm install details (Windows, Linux, Mac, Docker)**
 
 [Setting up Azure Authentication](https://cloudcustodian.io/docs/azure/authentication.html)
 

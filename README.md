@@ -134,7 +134,7 @@ Custodian is built with the ability to be run from different accounts and levera
     - [Event Grid Functions](https://github.com/cloud-custodian/cloud-custodian/blob/master/tools/c7n_azure/c7n_azure/azure_events.py)
    - [Managing Cloud Custodian across multiple Azure Subscriptions](https://cloudcustodian.io/docs/azure/advanced/multiplesubs.html)
    - [Logging - Blob Storage](https://cloudcustodian.io/docs/azure/advanced/bloboutput.html)
-   - **TO-DO: Alternative Architecture? (Andy Gee)**
+   - [Using Azure Functions and Logic Apps](https://github.com/plooploops/azure-functions-c7n-test/blob/master/scenarios-read-me/azure-functions-logic-apps-readme.md)
 - [Installation for Developers](https://cloudcustodian.io/docs/developer/installing.html#developer-installing)
     - **To-Do: ** Notes / Guidance from H/F?
   

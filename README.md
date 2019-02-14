@@ -1,6 +1,6 @@
 # Guide to Cloud Custodian on Azure
 
-**What is Cloud Custodian?**
+## **What is Cloud Custodian?**
 
 As enterprises evolve their computing environments from their on-premises data centers to include deployment across multiple public clouds, they are concerned about new business risk exposures that might arise.  
 
@@ -17,6 +17,8 @@ Cloud Custodian also provides the flexibility to deploy to a variety of executio
 
 The Cloud Custodian policies are based on a common vocabulary of FILTERS, RESOURCES and ACTIONS.  The policies define filters to select a subset of cloud resources.  The policies also instruct Cloud Custodian what action or actions to take on this subset.  This approach and vocabulary is comparable across public cloud providers.
 
+When a user runs Cloud Custodian, the Cloud Custodian application uses the specified policy to create a filter against the specified Azure resource.  Based on subscription specified by the user, Cloud Custodian iterates over all resources defined in the policy filter and produces a subset of matching resources within that subscription.  Then Cloud Custodian executes the action(s) specified in the policy again that subset of resources.  Cloud Custodian use the Azure native API to access the resources and execute the required actions.
+
 Some typical use cases where Cloud Custodian policies enforce corporate controls:
 - Disable Port 22 on all Virtual Machines within an Azure Security Group
 - Shut down any Virtual Machines not provisioned to use SSH Key user authentication
@@ -26,42 +28,41 @@ Some typical use cases where Cloud Custodian policies enforce corporate controls
 
 **To get started quickly, visit [here](https://cloudcustodian.io/docs/azure/gettingstarted.html)**
 
-**For a quick reference of the currently supported Azure resources, and much more, visit [here](https://cloudcustodian.io/docs/azure/policy/index.html)**
+**For a quick reference of currently supported Azure resources, and more, visit [here](https://cloudcustodian.io/docs/azure/policy/index.html)**
 
-**Architecture**
+## **Architecture**
 
 !["Cloud Custodian uses simple Yaml to enforce policy"](./pictures/yml-picture.jpg "Cloud Custodian uses simple Yaml to enforce policy")
 
 !["Cloud Custodian enables a consistent policy enforcement across clouds"](./pictures/cc-multi-cloud.jpg "Cloud Custodian enables a consistent policy enforcement across clouds")
 
-### **TO-DO: Component Overview**
-
-### Deployment
+## **Deployment**
 **To-Do: Need Azure Version**
 https://cloudcustodian.io/docs/overview/deployment.html
 
-### Process flow & How it Works
-The language also supports compound querying. This essentially allows you to filter for things like running VM instances with attached disks that are not set to delete on instance termination or stopped instances. This filtering can take into account external data sources. It also provides for resource specific actions around deletion, stopping, starting, encryption, tagging, etc.
-
-When a user runs Cloud Custodian, it will run the specified policy against the subscription specified by the user. Custodian will iterate over all resources defined in the policy. In the CLI, users specify the account and region they want to target. During the run, each policy in the config will generate metrics that are sent to CloudWatch in the account that is targeted. The run will also generate structured record output and logs that can be sent to an S3 Bucket and CloudWatch Log Groups in the account Custodian was run from. If Custodian is being run without Assume Roles, all output will be put into the same account. Custodian is built with the ability to be run from different accounts and leverage STS Role Assumption for cross-account access. Users can leverage the metrics that are being generated after each run by creating Custodian Dashboards in CloudWatch.
-
-Multi Subscription:
-https://github.com/cloud-custodian/cloud-custodian/tree/master/tools/c7n_org
+## **Process Flow & How it Works**
 
 
-Custodian uses a flexible query language for filtering resources to a particular subset that allows for compound querying. This essentially allows you to filter for things like instances with attached Azure Blob Storage disks or stopped instances. This filtering can take into account external data sources. It also provides for resource specific actions around deletion, stopping, starting, encryption, tagging, etc.
+Each policy can generate metrics that are sent to a predefined location that the user has access to.  The run will also generate structured record output and logs that can be sent to an Azure Blob Storage Account object. in the account Custodian was run from. 
 
-The stateless design of Custodian greatly simplifies feature development and operations. It also provides flexibility around execution environment (local cli, vm-based server or serverless container).
-
-When a user runs Custodian, Custodian will run the specified policy against the account and region specified by the user. Custodian will iterate over all resources defined in the policy. In the CLI, users specify the account and region they want to target. During the run, each policy in the config will generate metrics that are sent to **TO-DO: Azure flow?** in the account that is targeted. 
-
-The run will also generate structured record output and logs that can be sent to an Azure Blob Storage Account object. in the account Custodian was run from. 
+ **TO-DO: Azure flow?** 
 
 If Custodian is being run without **TO-DO: Azure flow?**  Assume Roles, all output will be put into the same account. 
 
 Custodian is built with the ability to be run from different accounts and leverage STS Role Assumption for cross-account access. Users can leverage the metrics that are being generated after each run by creating Custodian Dashboards in **TO-DO Azure flow?Azure OMS (other?)**.
 
-### Concepts
+The language also supports compound querying. This essentially allows you to filter for things like running VM instances with attached disks that are not set to delete on instance termination or stopped instances. This filtering can take into account external data sources. It also provides for resource specific actions around deletion, stopping, starting, encryption, tagging, etc.
+
+Custodian is built with the ability to be run from different accounts and leverage STS Role Assumption for cross-account access. Users can leverage the metrics that are being generated after each run by creating Custodian Dashboards in CloudWatch.
+
+Multi Subscription:
+https://github.com/cloud-custodian/cloud-custodian/tree/master/tools/c7n_org
+
+
+The stateless design of Custodian greatly simplifies feature development and operations. It also provides flexibility around execution environment (local cli, vm-based server or serverless container).
+
+
+## **Concepts**
 [Policy](https://cloudcustodian.io/docs/azure/policy/index.html)
 
 **TO-DO Resource**
@@ -74,7 +75,7 @@ Custodian is built with the ability to be run from different accounts and levera
 
 [On/Off Hours](https://cloudcustodian.io/docs/quickstart/offhours.html)
 
-## Getting Started
+## **Getting Started**
 
 [Getting Started and writing your first policy]( https://cloudcustodian.io/docs/azure/gettingstarted.html)
 
@@ -97,7 +98,7 @@ Custodian is built with the ability to be run from different accounts and levera
 
 - [Application and service principal objects in Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/develop/app-objects-and-service-principals)
 
-## Cloud Custodian Drill down - Basic Examples
+## **Cloud Custodian Drill down - Basic Examples**
 **To-Do: Azure ARM templates to set up and demonstrate policy execution results**
 
 - [Automatically tag the creator of a resource or resource group](https://cloudcustodian.io/docs/azure/examples/autotagusers.html)
@@ -116,7 +117,7 @@ Custodian is built with the ability to be run from different accounts and levera
     - [Deny access to Network Security Group](https://cloudcustodian.io/docs/azure/examples/nsg.html)
     - [Resize an Application Service Plan](https://cloudcustodian.io/docs/azure/examples/resizeappplan.html)
 
-## Cloud Custodian Drill down - Advanced
+## **Cloud Custodian Drill down - Advanced**
 **To-Do: Additional Set-Up or Instructions needed?**
 - [Examples and documentation for specific Azure Services](https://cloudcustodian.io/docs/azure/policy/index.html)
 - Specialized Features

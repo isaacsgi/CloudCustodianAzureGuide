@@ -1,3 +1,7 @@
+## To get started quickly, visit [here](https://cloudcustodian.io/docs/azure/gettingstarted.html)
+
+## For a quick reference of currently supported Azure resources, and more, visit [here](https://cloudcustodian.io/docs/azure/policy/index.html)
+
 # Guide to Cloud Custodian on Azure
 
 ## **What is Cloud Custodian?**
@@ -26,9 +30,6 @@ Some typical use cases where Cloud Custodian policies enforce corporate controls
 - Remove un-used Azure Storage Disks
 - Shut down Cloud services between certain hours
 
-**To get started quickly, visit [here](https://cloudcustodian.io/docs/azure/gettingstarted.html)**
-
-**For a quick reference of currently supported Azure resources, and more, visit [here](https://cloudcustodian.io/docs/azure/policy/index.html)**
 
 ## **Architecture**
 
